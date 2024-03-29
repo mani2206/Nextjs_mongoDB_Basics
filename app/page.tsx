@@ -10,13 +10,13 @@ export default async function Home() {
 
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {
-        data.map(item=>(
-          <h2 key={item.id}>{item.msg}</h2>
-        ))
-      }
-      <h1>Welcome to my world</h1>
-    </main>
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    {
+      data.map((item: { id: number, msg: string }) => (
+        <h2 key={item.id}>{item.msg}</h2>
+      ))
+    }
+        <h1>Welcome to my world</h1>
+  </main>
   );
 }
